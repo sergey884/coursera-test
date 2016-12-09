@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="LunchCheck">
+<head>
+<script src = "angular.js"></script>
+<script src = "app.js"></script>
+<style>
+.hide {
+	display : none;
+	visibility : hidden;
+}
+
+.show {
+	display : block;
+	visibility : visible;
+}
+.gr_color {
+	color : green;
+}
+
+.red_color {
+	color : red;
+}
+.gr_b_color {
+	border : 1px solid green;
+}
+.red_b_color {
+	border : 1px solid red;
+}
+</style>
+</head>
+<body>
+<div ng-controller = "LunchCheckController">
+	<input type = "text" class = "{{txt_border}}" ng-model="text" />
+	<input type = "button" value = "Check If Too Much" ng-click = "checkLunch()" />
+	<div>
+		<span class = "red_color {{cl_empty}}">Please enter data first</span>
+		<span class = "gr_color {{cl_enjoy}}">Enjoy!</span>
+		<span class = "gr_color {{cl_too_much}}">Too much!</span>
+	</div>
+</div>
+</body>
+</html>
