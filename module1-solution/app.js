@@ -22,7 +22,6 @@ function LunchCheckController($scope) {
 			return;
 		}
 		var textArr = $scope.text.replace(/\s+/g, '').replace(/,+/g, ',').replace(/^,|,$/g, '').split(',');
-		console.log(textArr);
 		$scope.cl_empty = "hide";
 		$scope.txt_border = 'gr_b_color';
 		if (textArr.length <= 3) {

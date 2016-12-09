@@ -1,42 +1,53 @@
 <!doctype html>
-<html ng-app="LunchCheck">
-<head>
-<script src = "angular.js"></script>
-<script src = "app.js"></script>
-<style>
-.hide {
-	display : none;
-	visibility : hidden;
-}
+<html lang="en" ng-app="LunchCheck">
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+	.message { font-size: 1.3em; font-weight: bold; }
+	.hide {
+		display : none;
+		visibility : hidden;
+	}
 
-.show {
-	display : block;
-	visibility : visible;
-}
-.gr_color {
-	color : green;
-}
-
-.red_color {
-	color : red;
-}
-.gr_b_color {
-	border : 1px solid green;
-}
-.red_b_color {
-	border : 1px solid red;
-}
-</style>
-</head>
+	.show {
+		display : block;
+		visibility : visible;
+	}
+	.gr_color {
+		color : green;
+	}
+	.red_color {
+		color : red;
+	}
+	.gr_b_color {
+		border : 1px solid green;
+	}
+	.red_b_color {
+		border : 1px solid red;
+	}
+    </style>
+	<script src = "angular.js"></script>
+	<script src = "app.js"></script>
+  </head>
 <body>
-<div ng-controller = "LunchCheckController">
-	<input type = "text" class = "{{txt_border}}" ng-model="text" />
-	<input type = "button" value = "Check If Too Much" ng-click = "checkLunch()" />
-	<div>
-		<span class = "red_color {{cl_empty}}">Please enter data first</span>
-		<span class = "gr_color {{cl_enjoy}}">Enjoy!</span>
-		<span class = "gr_color {{cl_too_much}}">Too much!</span>
+	<div class="container" ng-controller = "LunchCheckController">
+		<h1>Lunch Checker</h1>
+
+		<div class="form-group">
+             <input id="lunch-menu" type="text" class = "{{txt_border}}"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control" ng-model="text">
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click = "checkLunch()">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+			<span class = "red_color {{cl_empty}}">Please enter data first</span>
+			<span class = "gr_color {{cl_enjoy}}">Enjoy!</span>
+			<span class = "gr_color {{cl_too_much}}">Too much!</span>
+         </div>
 	</div>
-</div>
 </body>
 </html>
