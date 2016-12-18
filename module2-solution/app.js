@@ -63,14 +63,6 @@ function ShoppingListCheckOffService() {
   service.getBuoghtItems = function () {
     return bought;
   };
-  
-  service.isBuyEmpty = function () {
-    return !buy.length;
-  };
-  
-   service.isBoughtEmpty = function () {
-    return !bought.length;
-  };
 }
 
 })();
