@@ -11,8 +11,6 @@ ToBuyController.$inject = ['$scope', 'ShoppingListCheckOffService'];
 function ToBuyController($scope, ShoppingListCheckOffService) {
 	var showBuyList = this;
 	showBuyList.items = ShoppingListCheckOffService.getBuyItems();
-	
-	showBuyList.empty = ShoppingListCheckOffService.isBuyEmpty();
 
 	showBuyList.removeItem = function (itemIndex) {
 		ShoppingListCheckOffService.removeItem(itemIndex);
@@ -23,9 +21,6 @@ AlreadyBoughtController.$inject = ['$scope', 'ShoppingListCheckOffService'];
 function AlreadyBoughtController($scope, ShoppingListCheckOffService) {
 	var showBoughtList = this;
 	showBoughtList.items = ShoppingListCheckOffService.getBuoghtItems();
-	
-	showBoughtList.empty = ShoppingListCheckOffService.isBoughtEmpty();
-
 }
 
 function ShoppingListCheckOffService() {
@@ -44,6 +39,14 @@ function ShoppingListCheckOffService() {
 	{
       name: "potatoes",
       quantity: 20
+    },
+	{
+      name: "milk",
+      quantity: 2
+    },
+	{
+      name: "bacon",
+      quantity: 11
     }
   ];
   var bought = [];
