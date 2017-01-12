@@ -42,7 +42,6 @@ function NarrowItDownController(MenuSearchService) {
 			} else {
 				menu.emptyString = '';
 			}
-			console.log(menu.found);
 		});
 	}
 	
@@ -65,7 +64,6 @@ function MenuSearchService($http, MenuBasePath) {
 		return response.then(function (result) {
 		
 			var menu_items = result.data.menu_items;
-			console.log(menu_items);
 			var i, menu_items_length = menu_items.length;
 			var sTerm = '';
 			if (searchTerm) {
