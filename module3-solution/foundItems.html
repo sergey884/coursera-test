@@ -1,0 +1,8 @@
+<ol class="list-group">
+  <li ng-repeat="item in menu.items" class="list-group-item">
+    <b>{{ item.name }}</b>,
+    <i>{{ item.short_name }}</i>,
+    {{ item.description }}
+    <button ng-click="menu.onRemove({index: $index});" class="btn btn-primary">Don't want this one!</button>
+  </li>
+</ol>

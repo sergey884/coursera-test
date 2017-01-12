@@ -50,3 +50,13 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+.emptyMessage {
+	font-size: 24px;
+	color : red;	
+	width: 160px;
+}
+.list-group-item {
+	list-style: decimal inside; 
+	display: list-item;
+}
