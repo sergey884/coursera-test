@@ -1,0 +1,7 @@
+h1 {
+  margin-bottom: 30px;
+}
+.hov:hover {
+	background-color : #337ab7;
+	cursor : pointer;
+}
